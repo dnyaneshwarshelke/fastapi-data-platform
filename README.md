@@ -40,7 +40,7 @@ Future integrations may include:
 # Repository Structure
 
 ```
-fastapi-data-engineering-labs
+fastapi-data-platform
 │
 ├── app
 │   ├── main.py                # FastAPI application entry point
