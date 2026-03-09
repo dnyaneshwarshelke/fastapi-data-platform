@@ -11,7 +11,7 @@ class ProductService:
             raise FileNotFoundError(f"Data file not found at {self.data_file_path}")
         
         with open(self.data_file_path, 'r') as file:
-            products = json.load(file)
+            products = json.load(file)  # type: List[dict]
         return products
 
     def get_product_by_id(self, product_id: int) -> dict:
@@ -19,4 +19,4 @@ class ProductService:
         for product in products:
             if product['id'] == product_id:
                 return product
-        return None
+        raise ValueError(f"Product with id {product_id} not found")
